@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js に Storybook 入れる／TailwindCSS を Storybook に反映するとこまで
 
-## Getting Started
+## ▼ 手順
 
-First, run the development server:
+1.  Next.js アプリを作成
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+        npx create-next-app [アプリ名]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  storybook をインストール & 初期セットアップ
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+        npx storybook@latest init
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3.  TailwindCSS が storybook に反映されるようにセットアップ
 
-## Learn More
+        npm install --save-dev @storybook/addon-postcss
 
-To learn more about Next.js, take a look at the following resources:
+4.  .storybook/main.ts に上記アドオンを使用する旨を追記
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5.  `.storybook/preview.ts` で `/src/app/globals.css` を import（TailwindCSS を Storybook に読み込む）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6.  サンプルで TailwindCSS を使用した Button コンポーネントを作成
 
-## Deploy on Vercel
+## ▼ 動作確認
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    npm run storybook
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+http://localhost:6006/ が立ち上がる
+
+- サイドバーの example は上記手順 2 で自動作成されたもの（あとで削除する）
+- サイドバーの atoms は上記手順 4 で作ったもの（src/components/atoms/Button.stories.ts）
+
+## ▼ 参考
+
+https://storybook.js.org/recipes/next
+https://zenn.dev/angelecho/articles/d296dea1af8a19
