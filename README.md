@@ -16,7 +16,7 @@
 
 4.  .storybook/main.ts に上記アドオンを使用する旨を追記（[commit](https://github.com/yuktnk/next-storybook-sample/commit/7f20a003cf792e256fcd300beeb42a60fc570a7f)）
 
-5.  `.storybook/preview.ts` で `/src/app/globals.css` を import（TailwindCSS を Storybook に読み込む）
+5.  `.storybook/preview.ts` で `/src/app/globals.css` を import（[commit](https://github.com/yuktnk/next-storybook-sample/commit/7f20a003cf792e256fcd300beeb42a60fc570a7f)）
 
 6.  サンプルで TailwindCSS を使用した Button コンポーネントを作成（[commit](https://github.com/yuktnk/next-storybook-sample/commit/106504ab62e25e67a4ec6532b9bee7078e3680be)）
 
