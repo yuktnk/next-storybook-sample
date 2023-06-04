@@ -18,7 +18,7 @@
 
 5.  `.storybook/preview.ts` で `/src/app/globals.css` を import（TailwindCSS を Storybook に読み込む）
 
-6.  サンプルで TailwindCSS を使用した Button コンポーネントを作成
+6.  サンプルで TailwindCSS を使用した Button コンポーネントを作成（106504ab62e25e67a4ec6532b9bee7078e3680be）
 
 ## ▼ 動作確認
 
