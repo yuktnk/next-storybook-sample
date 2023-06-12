@@ -1,9 +1,8 @@
 interface ButtonProps {
   primary?: boolean;
-  backgroundColor?: string;
   fontSize?: 'sm' | 'base' | 'lg';
   innerText: string;
-  onClick?: () => void;
+  onClick: () => void;
 }
 
 export const Button = ({
